@@ -1,6 +1,7 @@
 import './styles/App.css';
 
 import Profile_text from './Profile_text';
+import Projects from './Projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -52,6 +53,8 @@ function App() {
 
 
     {/*=============== projects display =============== */}
+    <Projects/>
+
 
     </div>
     </body>

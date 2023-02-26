@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 function Profile_text(){
 
-    const phrases = ['Hello my name is Ian Ruvuto', 'I am developer', 'Welcome to my CV-look alike portfolio']
+    const phrases = ['Hello my name is Ian Ruvuto Kampwanyi', 'I am a developer', 'Welcome to my CV-look alike portfolio']
 
     return(
         <div className="ml10">
