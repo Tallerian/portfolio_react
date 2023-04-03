@@ -2,23 +2,26 @@ import React, {Component, useState} from 'react';
 import './styles/Projects.css';
 import Typewriter from 'typewriter-effect';
 
-
+const hover_me = "Hey hover me to view my project description"
+const projec_desc_1 = "This porject is about this and that this and that this and that this and that";
 
 function Projects(){
 
-    const pr_1 = ['Hello this is my project about']
+    const [hovered, setHovered] = useState(false);
 
-    const [isShown, setIsShown] = useState(false);
+    const handleHover = () => {
+      setHovered(true);
+    };
+  
+    const handleUnhover = () => {
+      setHovered(false);
+    };
 
-    function setShown() {
-        if (isShown == true){
-            console.log("clicked")
-            setIsShown(false)
-        }else{
-            console.log("clickkke")
-            setIsShown(true)
-        }
-    }
+    const [complete, setComplete] = useState(false);
+
+    const handleComplete = () => {
+        setComplete(true);
+      };
 
     return(
         <div class="project_container">
@@ -26,11 +29,23 @@ function Projects(){
                 <div className="project_img"></div>
 
                 <div className="project_desc" 
-                onClick={() => setShown()}
-                onMouseLeave={() => setIsShown(false)}
-                >
-                    {isShown ? <Projec_desc/>:<Hover_text/>}
+                onMouseEnter={handleHover} onMouseLeave={handleUnhover}>
+                    <div className='desc_text'>{!hovered ? hover_me : 
+                        <Typewriter
+                            options={
+                        {
+                            autoStart: true,
+                            loop: false,
+                            delay: 30,
+                            strings: projec_desc_1,
+                            pauseFor: 1000,
+
+                        }}
+                        onComplete={handleComplete}
+                        />}
+                    </div>
                 </div>
+                <div></div>
 
         </div>
     )

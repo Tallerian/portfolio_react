@@ -51,6 +51,11 @@ function App() {
 
     </div>
 
+    <div className='section_choose'>
+      <div className='section_projects'>Projects</div>
+      <div className='section_skills'>Skills</div>
+    </div>
+
 
     {/*=============== projects display =============== */}
     <Projects/>
